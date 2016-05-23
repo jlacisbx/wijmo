@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -10,9 +10,9 @@
     * http://wijmo.com/products/wijmo-5/license/
     *
     */
-import { ElementRef, ViewContainerRef, TemplateRef } from 'angular2/core';
-import { QueryList, Injector, Renderer } from 'angular2/core';
-import * as ngCore from 'angular2/core';
+import { ElementRef, ViewContainerRef, TemplateRef } from '@angular/core';
+import { QueryList, Injector, Renderer } from '@angular/core';
+import * as ngCore from '@angular/core';
 /**
  * Angular 2 component for the @see:FlexGrid control.
  *
@@ -99,7 +99,7 @@ export declare enum CellTemplateType {
  */
 export declare class WjFlexGridCellTemplate implements ngCore.OnInit, ngCore.OnDestroy {
     viewContainerRef: ViewContainerRef;
-    templateRef: TemplateRef;
+    templateRef: TemplateRef<any>;
     elRef: ElementRef;
     private domRenderer;
     wjFlexGridCellTemplate: any;
@@ -110,12 +110,12 @@ export declare class WjFlexGridCellTemplate implements ngCore.OnInit, ngCore.OnD
     grid: WjFlexGrid;
     column: WjFlexGridColumn;
     ownerControl: any;
-    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef, elRef: ElementRef, domRenderer: Renderer, injector: Injector);
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, elRef: ElementRef, domRenderer: Renderer, injector: Injector);
     static _getTemplContextProp(templateType: CellTemplateType): string;
     ngOnInit(): void;
     ngOnDestroy(): void;
     _instantiateTemplate(parent: HTMLElement): {
-        viewRef: ngCore.EmbeddedViewRef;
+        viewRef: ngCore.EmbeddedViewRef<any>;
         rootElement: Element;
     };
     private _attachToControl();
@@ -124,9 +124,9 @@ export declare class WjTemplateCmp {
     private viewContainerRef;
     private templateRef;
     private templates;
-    contentChildren: QueryList<TemplateRef>;
-    viewChildren: QueryList<TemplateRef>;
-    constructor(elRef: ElementRef, injector: Injector, viewContainerRef: ViewContainerRef, templateRef: TemplateRef, templates: QueryList<TemplateRef>);
+    contentChildren: QueryList<TemplateRef<any>>;
+    viewChildren: QueryList<TemplateRef<any>>;
+    constructor(elRef: ElementRef, injector: Injector, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, templates: QueryList<TemplateRef<any>>);
     ngAfterContentInit(): void;
     ngAfterViewInit(): void;
 }

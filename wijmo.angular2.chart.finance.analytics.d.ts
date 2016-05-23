@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -19,7 +19,7 @@
 * <pre>import * as wjAnalitics from 'wijmo/wijmo.angular2.chart.finance.analytics';</pre>
 *
 */
-import { Injector, ElementRef } from 'angular2/core';
+import { Injector, ElementRef } from '@angular/core';
 /**
 * Angular 2 component for the @see:WjFinancialChart @see:Fibonacci object.
 *

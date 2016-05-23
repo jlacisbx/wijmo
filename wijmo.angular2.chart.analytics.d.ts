@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -19,7 +19,7 @@
 * <pre>import * as wjAnalitics from 'wijmo/wijmo.angular2.chart.analytics';</pre>
 *
 */
-import { Injector, ElementRef } from 'angular2/core';
+import { Injector, ElementRef } from '@angular/core';
 /**
 * Angular 2 component for the @see:WjFlexChart @see:TrendLine object.
 *
@@ -50,5 +50,37 @@ export declare class WjFlexChartTrendLine extends wijmo.chart.analytics.TrendLin
 * inherits all its properties, events and methods.
 */
 export declare class WjFlexChartMovingAverage extends wijmo.chart.analytics.MovingAverage {
+    constructor(elRef: ElementRef, injector: Injector);
+}
+/**
+* Angular 2 component for the @see:WjFlexChart @see:YFunctionSeries object.
+*
+* The <b>wj-flex-chart-y-function-series</b> component must be contained in a
+* @see:wijmo/wijmo.angular2.chart.analytics.WjFlexChart component.
+*
+* Use the <b>wj-flex-chart-y-function-series</b> component to add <b>YFunctionSeries</b> objects to your
+* Angular 2 applications. For details about Angular 2 markup syntax, see
+* <a href="static/angular2Markup.html">Angular 2 Markup</a>.
+*
+* The <b>WjFlexChartYFunctionSeries</b> component is derived from the <b>YFunctionSeries</b> class and
+* inherits all its properties, events and methods.
+*/
+export declare class WjFlexChartYFunctionSeries extends wijmo.chart.analytics.YFunctionSeries {
+    constructor(elRef: ElementRef, injector: Injector);
+}
+/**
+* Angular 2 component for the @see:WjFlexChart @see:ParametricFunctionSeries object.
+*
+* The <b>wj-flex-chart-parametric-function-series</b> component must be contained in a
+* @see:wijmo/wijmo.angular2.chart.analytics.WjFlexChart component.
+*
+* Use the <b>wj-flex-chart-parametric-function-series</b> component to add <b>ParametricFunctionSeries</b> objects to your
+* Angular 2 applications. For details about Angular 2 markup syntax, see
+* <a href="static/angular2Markup.html">Angular 2 Markup</a>.
+*
+* The <b>WjFlexChartParametricFunctionSeries</b> component is derived from the <b>ParametricFunctionSeries</b> class and
+* inherits all its properties, events and methods.
+*/
+export declare class WjFlexChartParametricFunctionSeries extends wijmo.chart.analytics.ParametricFunctionSeries {
     constructor(elRef: ElementRef, injector: Injector);
 }

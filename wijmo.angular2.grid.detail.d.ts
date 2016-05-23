@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -10,8 +10,7 @@
     * http://wijmo.com/products/wijmo-5/license/
     *
     */
-import { Injector, ElementRef, ViewContainerRef, TemplateRef, Renderer } from 'angular2/core';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { Injector, ElementRef, ViewContainerRef, TemplateRef, Renderer } from '@angular/core';
 /**
  * Angular 2 directive for @see:FlexGrid @see:DetailRow templates.
  *
@@ -28,12 +27,11 @@ import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
  *
  */
 export declare class WjFlexGridDetail extends wijmo.grid.detail.FlexGridDetailProvider {
-    private _viewContainerRef;
-    private _templateRef;
-    private _domRenderer;
-    flexGrid: WjFlexGrid;
     private static _viewRefProp;
     wjFlexGridDetail: any;
-    constructor(_viewContainerRef: ViewContainerRef, _templateRef: TemplateRef, _domRenderer: Renderer, elRef: ElementRef, injector: Injector, flexGrid: WjFlexGrid);
+    _viewContainerRef: ViewContainerRef;
+    _templateRef: TemplateRef<any>;
+    _domRenderer: Renderer;
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, domRenderer: Renderer, elRef: ElementRef, injector: Injector);
     private _init();
 }

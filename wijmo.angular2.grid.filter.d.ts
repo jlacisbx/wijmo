@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -32,8 +32,7 @@
 * }</pre>
 *
 */
-import { Injector, ElementRef } from 'angular2/core';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { Injector, ElementRef } from '@angular/core';
 /**
     * Angular 2 component for the @see:FlexGrid @see:FlexGridFilter object.
     *
@@ -48,5 +47,5 @@ import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
     * inherits all its properties, events and methods.
 */
 export declare class WjFlexGridFilter extends wijmo.grid.filter.FlexGridFilter {
-    constructor(elRef: ElementRef, injector: Injector, flexGrid: WjFlexGrid);
+    constructor(elRef: ElementRef, injector: Injector);
 }

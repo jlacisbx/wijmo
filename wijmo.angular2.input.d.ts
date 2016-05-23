@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -10,8 +10,9 @@
     * http://wijmo.com/products/wijmo-5/license/
     *
     */
-import { ElementRef, Injector, ViewContainerRef, TemplateRef, Renderer, AppViewManager } from 'angular2/core';
-import * as ngCore from 'angular2/core';
+import { ElementRef, Injector, ViewContainerRef, TemplateRef, Renderer } from '@angular/core';
+import * as ngCore from '@angular/core';
+import { NgModel, NgControlName } from '@angular/common';
 /**
  * Angular 2 component for the @see:ComboBox control.
  *
@@ -114,7 +115,7 @@ export declare class WjMultiSelect extends wijmo.input.MultiSelect {
  * inherits all its properties, events and methods.
 */
 export declare class WjInputNumber extends wijmo.input.InputNumber {
-    constructor(elRef: ElementRef, injector: Injector);
+    constructor(elRef: ElementRef, injector: Injector, ngModelDir: NgModel, ngControlNameDir: NgControlName);
 }
 /**
  * Angular 2 component for the @see:InputDate control.
@@ -189,9 +190,7 @@ export declare class WjListBox extends wijmo.input.ListBox {
 export declare class WjMenu extends wijmo.input.Menu implements ngCore.OnInit, ngCore.OnDestroy, ngCore.OnChanges, ngCore.AfterContentInit {
     private _value;
     private _definedHeader;
-    private _appRef;
-    private _cdRef;
-    constructor(elRef: ElementRef, injector: Injector, appRef: ngCore.ApplicationRef, cdRef: ngCore.ChangeDetectorRef);
+    constructor(elRef: ElementRef, injector: Injector);
     value: any;
     ngOnInit(): void;
     ngOnDestroy(): void;
@@ -230,7 +229,6 @@ export declare class WjMenu extends wijmo.input.Menu implements ngCore.OnInit, n
 export declare class WjMenuItem implements ngCore.OnInit, ngCore.AfterContentInit {
     elRef: ElementRef;
     private viewContainerRef;
-    private appViewManager;
     private domRenderer;
     value: string;
     cmd: string;
@@ -239,7 +237,7 @@ export declare class WjMenuItem implements ngCore.OnInit, ngCore.AfterContentIni
     _ownerMenu: wijmo.input.Menu;
     templateDir: WjMenuItemTemplateDir;
     contentRoot: HTMLElement;
-    constructor(elRef: ElementRef, injector: Injector, viewContainerRef: ViewContainerRef, appViewManager: AppViewManager, domRenderer: Renderer);
+    constructor(elRef: ElementRef, injector: Injector, viewContainerRef: ViewContainerRef, domRenderer: Renderer);
     ngOnInit(): void;
     wjAfterParentInit(): void;
     ngAfterContentInit(): void;
@@ -252,18 +250,18 @@ export declare class WjMenuItem implements ngCore.OnInit, ngCore.AfterContentIni
  * It adds a non-selectable separator to the menu, and has no attributes.
  */
 export declare class WjMenuSeparator extends WjMenuItem implements ngCore.OnInit {
-    constructor(elRef: ElementRef, injector: Injector, viewContainerRef: ViewContainerRef, appViewManager: AppViewManager, domRenderer: Renderer);
+    constructor(elRef: ElementRef, injector: Injector, viewContainerRef: ViewContainerRef, domRenderer: Renderer);
     ngOnInit(): void;
 }
 export declare class WjMenuItemTemplateDir implements ngCore.OnInit, ngCore.AfterContentInit {
     viewContainerRef: ViewContainerRef;
-    templateRef: TemplateRef;
+    templateRef: TemplateRef<any>;
     elRef: ElementRef;
     private domRenderer;
     wjMenuItemTemplateDir: any;
     ownerItem: WjMenuItem;
     contentRoot: HTMLElement;
-    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef, elRef: ElementRef, injector: Injector, domRenderer: Renderer, menuItem: WjMenuItem, menuSeparator: WjMenuSeparator);
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, elRef: ElementRef, injector: Injector, domRenderer: Renderer, menuItem: WjMenuItem, menuSeparator: WjMenuSeparator);
     ngOnInit(): void;
     ngAfterContentInit(): void;
 }
@@ -272,13 +270,13 @@ export declare class WjMenuItemTemplateDir implements ngCore.OnInit, ngCore.Afte
  */
 export declare class WjItemTemplate implements ngCore.OnInit, ngCore.OnDestroy {
     viewContainerRef: ViewContainerRef;
-    templateRef: TemplateRef;
+    templateRef: TemplateRef<any>;
     elRef: ElementRef;
     private domRenderer;
     wjItemTemplate: any;
     ownerControl: wijmo.Control;
     listBox: wijmo.input.ListBox;
-    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef, elRef: ElementRef, injector: Injector, domRenderer: Renderer);
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, elRef: ElementRef, injector: Injector, domRenderer: Renderer);
     ngOnInit(): void;
     ngOnDestroy(): void;
     private _attachToControl();

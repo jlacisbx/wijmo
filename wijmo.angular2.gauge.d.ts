@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -28,7 +28,7 @@
 * }</pre>
 *
 */
-import { ElementRef, Injector } from 'angular2/core';
+import { ElementRef, Injector } from '@angular/core';
 /**
  * Angular 2 component for the @see:LinearGauge control.
  *

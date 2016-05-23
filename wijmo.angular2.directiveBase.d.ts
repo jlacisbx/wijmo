@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -10,14 +10,15 @@
     * http://wijmo.com/products/wijmo-5/license/
     *
     */
-import * as ng2 from 'angular2/core';
-import { ChangeDetectionStrategy, Type, ViewEncapsulation } from 'angular2/core';
+import * as ng2 from '@angular/core';
+import { ChangeDetectionStrategy, Type, ViewEncapsulation } from '@angular/core';
 import { wjMetaBase } from "wijmo/wijmo.metaFactory";
 export declare var WjComponent: (options: {
     wjIsDirective?: boolean;
     wjMetadataId?: any;
     wjParentDirectives?: any[];
     wjSiblingDirectiveId?: string;
+    wjOverride?: any;
     selector?: string;
     inputs?: string[];
     outputs?: string[];
@@ -84,8 +85,8 @@ export declare class WjDirectiveBehavior {
     dirOnInit(originalMethod: Function): void;
     dirOnDestroy(originalMethod: Function): void;
     dirOnChanges(originalMethod: Function, changes: any): void;
-    static instantiateTemplate(parent: HTMLElement, viewContainerRef: ng2.ViewContainerRef, templateRef: ng2.TemplateRef, domRenderer: ng2.Renderer): {
-        viewRef: ng2.EmbeddedViewRef;
+    static instantiateTemplate(parent: HTMLElement, viewContainerRef: ng2.ViewContainerRef, templateRef: ng2.TemplateRef<any>, domRenderer: ng2.Renderer): {
+        viewRef: ng2.EmbeddedViewRef<any>;
         rootElement: Element;
     };
     private createEvents();
@@ -106,7 +107,6 @@ export declare class WjDirectiveBehavior {
     private _isHostElement();
     private static evaluatePath(obj, path);
     static getBehavior(directive: any): WjDirectiveBehavior;
-    static containsDirective(parentDirective: Object, childDirective: Object): boolean;
     static resolveForwardDecl(array: any[]): void;
     static findParentBehavior(injector: ng2.Injector, directiveTypes: any[], upToBehavior?: WjDirectiveBehavior): WjDirectiveBehavior;
 }
@@ -125,4 +125,9 @@ export declare class Ng2Utils {
             evImpl: string;
         }[];
     }[];
+    static getBaseType(type: Type): Type;
+    static getAnnotations(type: Type): any[];
+    static getAnnotation(annotations: any[], annotationType: Type): any;
+    static getTypeAnnotation(type: Type, annotationType: Type, own?: boolean): any;
+    static _copy(dst: any, src: any, override?: boolean, includePrivate?: boolean, filter?: (name: string, value: any) => boolean): void;
 }

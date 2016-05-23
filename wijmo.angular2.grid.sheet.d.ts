@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.138
+    * Wijmo Library 5.20161.153
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -27,7 +27,7 @@
 * }</pre>
 *
 */
-import { Injector, ElementRef, OnInit, OnChanges, SimpleChange } from 'angular2/core';
+import { Injector, ElementRef, OnInit, OnChanges, SimpleChange } from '@angular/core';
 /**
 * Angular 2 component for the @see:FlexSheet control.
 *
@@ -58,10 +58,10 @@ export declare class WjFlexSheet extends wijmo.grid.sheet.FlexSheet {
 * inherits all its properties, events and methods.
 */
 export declare class WjSheet extends wijmo.grid.sheet.Sheet implements OnInit, OnChanges {
-    private _flexSheet;
     boundRowCount: number;
     boundColumnCount: number;
-    constructor(elRef: ElementRef, injector: Injector, _flexSheet: WjFlexSheet);
+    private _flexSheet;
+    constructor(elRef: ElementRef, injector: Injector);
     ngOnChanges(changes: {
         [key: string]: SimpleChange;
     }): any;
