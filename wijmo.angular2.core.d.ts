@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -27,7 +27,7 @@
 * }</pre>
 *
 */
-import { ElementRef, Injector, DynamicComponentLoader, EventEmitter, AfterViewInit } from '@angular/core';
+import { ElementRef, Injector, EventEmitter, AfterViewInit, ComponentFactoryResolver } from '@angular/core';
 import * as ngCore from '@angular/core';
 /**
  * Angular 2 directive for the @see:Tooltip class.
@@ -61,14 +61,15 @@ export declare class WjTooltip implements ngCore.OnDestroy {
  * TBD
  */
 export declare class WjComponentLoader implements AfterViewInit {
-    private _dcl;
+    private _cmpResolver;
     private _elementRef;
     private _component;
     private _properties;
     private _cmpRef;
+    private _isViewInit;
     private _anchor;
     propertiesChange: EventEmitter<{}>;
-    constructor(_dcl: DynamicComponentLoader, _elementRef: ElementRef);
+    constructor(_cmpResolver: ComponentFactoryResolver, _elementRef: ElementRef);
     component: any;
     properties: Object;
     ngAfterViewInit(): void;
@@ -76,21 +77,5 @@ export declare class WjComponentLoader implements AfterViewInit {
     private _updateProperties();
     private _addPropListener(component, propName, propChange);
 }
-/**
- * TBD: ngBindHtml analogue
- */
-export declare class WjHtmlLoader implements AfterViewInit {
-    private _dcl;
-    private _elementRef;
-    private _components;
-    private _bindingContext;
-    private _bindings;
-    private _cmpRef;
-    private _anchor;
-    html: string;
-    constructor(_dcl: DynamicComponentLoader, _elementRef: ElementRef);
-    components: any[];
-    bindingContext: Object;
-    ngAfterViewInit(): void;
-    private _createComponent();
+export declare class WjCoreModule {
 }

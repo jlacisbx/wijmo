@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -24,7 +24,7 @@ import { Injector, ElementRef } from '@angular/core';
 * Angular 2 component for the @see:WjFlexChart @see:TrendLine object.
 *
 * The <b>wj-flex-chart-trend-line</b> component must be contained in a
-* @see:wijmo/wijmo.angular2.chart.analytics.WjFlexChart component.
+* @see:wijmo/wijmo.angular2.chart.WjFlexChart component.
 *
 * Use the <b>wj-flex-chart-trend-line</b> component to add <b>TrendLine</b> objects to your
 * Angular 2 applications. For details about Angular 2 markup syntax, see
@@ -40,7 +40,7 @@ export declare class WjFlexChartTrendLine extends wijmo.chart.analytics.TrendLin
 * Angular 2 component for the @see:WjFlexChart @see:MovingAverage object.
 *
 * The <b>wj-flex-chart-moving-average</b> component must be contained in a
-* @see:wijmo/wijmo.angular2.chart.analytics.WjFlexChart component.
+* @see:wijmo/wijmo.angular2.chart.WjFlexChart component.
 *
 * Use the <b>wj-flex-chart-moving-average</b> component to add <b>MovingAverage</b> objects to your
 * Angular 2 applications. For details about Angular 2 markup syntax, see
@@ -56,7 +56,7 @@ export declare class WjFlexChartMovingAverage extends wijmo.chart.analytics.Movi
 * Angular 2 component for the @see:WjFlexChart @see:YFunctionSeries object.
 *
 * The <b>wj-flex-chart-y-function-series</b> component must be contained in a
-* @see:wijmo/wijmo.angular2.chart.analytics.WjFlexChart component.
+* @see:wijmo/wijmo.angular2.chart.WjFlexChart component.
 *
 * Use the <b>wj-flex-chart-y-function-series</b> component to add <b>YFunctionSeries</b> objects to your
 * Angular 2 applications. For details about Angular 2 markup syntax, see
@@ -72,7 +72,7 @@ export declare class WjFlexChartYFunctionSeries extends wijmo.chart.analytics.YF
 * Angular 2 component for the @see:WjFlexChart @see:ParametricFunctionSeries object.
 *
 * The <b>wj-flex-chart-parametric-function-series</b> component must be contained in a
-* @see:wijmo/wijmo.angular2.chart.analytics.WjFlexChart component.
+* @see:wijmo/wijmo.angular2.chart.WjFlexChart component.
 *
 * Use the <b>wj-flex-chart-parametric-function-series</b> component to add <b>ParametricFunctionSeries</b> objects to your
 * Angular 2 applications. For details about Angular 2 markup syntax, see
@@ -83,4 +83,22 @@ export declare class WjFlexChartYFunctionSeries extends wijmo.chart.analytics.YF
 */
 export declare class WjFlexChartParametricFunctionSeries extends wijmo.chart.analytics.ParametricFunctionSeries {
     constructor(elRef: ElementRef, injector: Injector);
+}
+/**
+* Angular 2 component for the @see:WjFlexChart @see:Waterfall object.
+*
+* The <b>wj-flex-chart-waterfall</b> component must be contained in a
+* @see:wijmo/wijmo.angular2.chart.WjFlexChart component.
+*
+* Use the <b>wj-flex-chart-waterfall</b> component to add <b>Waterfall</b> objects to your
+* Angular 2 applications. For details about Angular 2 markup syntax, see
+* <a href="static/angular2Markup.html">Angular 2 Markup</a>.
+*
+* The <b>WjFlexChartWaterfall</b> component is derived from the <b>Waterfall</b> class and
+* inherits all its properties, events and methods.
+*/
+export declare class WjFlexChartWaterfall extends wijmo.chart.analytics.Waterfall {
+    constructor(elRef: ElementRef, injector: Injector);
+}
+export declare class WjChartAnalyticsModule {
 }

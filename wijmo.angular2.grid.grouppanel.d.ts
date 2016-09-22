@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -48,4 +48,6 @@ import { Injector, ElementRef } from '@angular/core';
 */
 export declare class WjGroupPanel extends wijmo.grid.grouppanel.GroupPanel {
     constructor(elRef: ElementRef, injector: Injector);
+}
+export declare class WjGridGrouppanelModule {
 }

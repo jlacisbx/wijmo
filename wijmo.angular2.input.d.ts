@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -12,7 +12,6 @@
     */
 import { ElementRef, Injector, ViewContainerRef, TemplateRef, Renderer } from '@angular/core';
 import * as ngCore from '@angular/core';
-import { NgModel, NgControlName } from '@angular/common';
 /**
  * Angular 2 component for the @see:ComboBox control.
  *
@@ -115,7 +114,7 @@ export declare class WjMultiSelect extends wijmo.input.MultiSelect {
  * inherits all its properties, events and methods.
 */
 export declare class WjInputNumber extends wijmo.input.InputNumber {
-    constructor(elRef: ElementRef, injector: Injector, ngModelDir: NgModel, ngControlNameDir: NgControlName);
+    constructor(elRef: ElementRef, injector: Injector);
 }
 /**
  * Angular 2 component for the @see:InputDate control.
@@ -198,6 +197,7 @@ export declare class WjMenu extends wijmo.input.Menu implements ngCore.OnInit, n
         [key: string]: ngCore.SimpleChange;
     }): void;
     ngAfterContentInit(): void;
+    onItemClicked(e?: wijmo.EventArgs): void;
     refresh(fullUpdate?: boolean): void;
     private _attachToControl();
     private _loadingItems(s);
@@ -342,11 +342,12 @@ export declare class WjContextMenu {
 /**
  * Angular 2 component for an @see:ICollectionView navigator element.
  *
- * Use the <b>wj-collection-view-navigator</b> component to add an element that allows users to
- * navigate through the items in an @see:ICollectionView. For details about Angular 2 markup syntax, see
+ * Use the <b>wj-collection-view-navigator</b> component to add an element
+ * that allows users to navigate through the items in an @see:ICollectionView.
+ * For details about Angular 2 markup syntax, see
  * <a href="static/angular2Markup.html">Angular 2 Markup</a>. For example:
  *
- * &lt;wj-collection-view-navigator
+ * <pre>&lt;wj-collection-view-navigator
  *   [cv]="myCollectionView"&gt;
  * &lt;/wj-collection-view-navigator&gt;</pre>
  */
@@ -357,15 +358,18 @@ export declare class WjCollectionViewNavigator {
 /**
  * Angular 2 component for an @see:ICollectionView pager element.
  *
- * Use the <b>wj-collection-view-pager</b> component to add an element that allows users to
- * navigate through the pages in a paged @see:ICollectionView. For details about Angular 2 markup syntax, see
+ * Use the <b>wj-collection-view-pager</b> component to add an element
+ * that allows users to navigate through the pages in a paged @see:ICollectionView.
+ * For details about Angular 2 markup syntax, see
  * <a href="static/angular2Markup.html">Angular 2 Markup</a>. For example:
  *
- * &lt;wj-collection-view-pager
+ * <pre>&lt;wj-collection-view-pager
  *   [cv]="myCollectionView"&gt;
  * &lt;/wj-collection-view-pager&gt;</pre>
  */
 export declare class WjCollectionViewPager {
     cv: wijmo.collections.CollectionView;
     constructor(elRef: ElementRef, injector: Injector);
+}
+export declare class WjInputModule {
 }

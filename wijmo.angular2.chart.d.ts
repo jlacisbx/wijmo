@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -176,4 +176,6 @@ export declare class WjFlexChartDataPoint extends wijmo.chart.DataPoint {
 */
 export declare class WjFlexChartPlotArea extends wijmo.chart.PlotArea {
     constructor(elRef: ElementRef, injector: Injector);
+}
+export declare class WjChartModule {
 }

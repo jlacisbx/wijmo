@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -38,8 +38,8 @@ import { Injector, ElementRef, OnInit, OnChanges, SimpleChange } from '@angular/
 * The <b>WjFlexSheet</b> component is derived from the <b>FlexSheet</b> control and
 * inherits all its properties, events and methods.
 *
-* The <b>wj-flex-sheet</b> component may contain @see:wijmo/wijmo.angular2.grid.sheet.Sheet
-* child component.
+* The <b>wj-flex-sheet</b> component may contain
+* @see:wijmo/wijmo.angular2.grid.sheet.WjSheet child components.
 */
 export declare class WjFlexSheet extends wijmo.grid.sheet.FlexSheet {
     constructor(elRef: ElementRef, injector: Injector);
@@ -66,4 +66,6 @@ export declare class WjSheet extends wijmo.grid.sheet.Sheet implements OnInit, O
         [key: string]: SimpleChange;
     }): any;
     ngOnInit(): wijmo.grid.sheet.Sheet;
+}
+export declare class WjGridSheetModule {
 }

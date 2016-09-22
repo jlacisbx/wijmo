@@ -1,6 +1,6 @@
 /*
     *
-    * Wijmo Library 5.20161.153
+    * Wijmo Library 5.20162.207
     * http://wijmo.com/
     *
     * Copyright(c) GrapeCity, Inc.  All rights reserved.
@@ -65,4 +65,6 @@ export declare class WjFlexChartRangeSelector extends wijmo.chart.interaction.Ra
 */
 export declare class WjFlexChartGestures extends wijmo.chart.interaction.ChartGestures {
     constructor(elRef: ElementRef, injector: Injector);
+}
+export declare class WjChartInteractionModule {
 }
